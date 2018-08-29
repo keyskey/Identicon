@@ -50,7 +50,7 @@ defmodule Identicon do
     grid = hex
     |> Enum.chunk(3)
     |> Enum.map(&mirror_row/1)
-    |> List.flatten    #ネストしたリストをただのリストに直す
+    |> List.flatten    
     |> Enum.with_index
 
     %Identicon.Image{image | grid: grid}
